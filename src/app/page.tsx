@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import Particles from "@/components/Particles";
 import ScaleaCore from "@/components/ScaleaCore";
 import TypingText from "@/components/TypingText";
+import CaChip from "@/components/CaChip";
 import { Badge, SectionLabel, CommandCard, Metric, Terminal, AgentCard } from "@/components/os";
 import { site, hero, stats, surfaces, agent, modules } from "@/lib/content";
 
@@ -51,6 +52,11 @@ export default function Home() {
                 phrases={agent.prompts}
                 className="text-mist"
               />
+            </div>
+          </Reveal>
+          <Reveal delay={260}>
+            <div className="mt-7 flex justify-center">
+              <CaChip />
             </div>
           </Reveal>
         </div>

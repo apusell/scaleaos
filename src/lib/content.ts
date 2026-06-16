@@ -11,7 +11,8 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://scaleaos.com",
   email: "hello@scaleaos.com",
   x: "https://x.com/ScaleaOS", // handle X resmi ScaleaOS
-  ca: "", // ← isi Contract Address token Solana saat sudah ada
+  ca: "2Qrc7Fu8EX4NtqLRQgkKj52epCRBtSt5xzw9hT2mpump", // Solana token contract address
+  pump: "https://pump.fun/coin/2Qrc7Fu8EX4NtqLRQgkKj52epCRBtSt5xzw9hT2mpump",
   // control-panel navigation
   nav: [
     { label: "Engine", href: "/engine" },
