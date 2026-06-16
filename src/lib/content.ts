@@ -10,7 +10,7 @@ export const site = {
     "ScaleaOS is an AI-native business operating system — an autonomous engine, intelligence layer, command workspace and automation fabric in one command center, run by an AI agent that understands your company.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://scaleaos.com",
   email: "hello@scaleaos.com",
-  x: "https://x.com/ScaleOSagent", // handle X resmi ScaleaOS
+  x: "https://x.com/ScaleaOS", // handle X resmi ScaleaOS
   ca: "", // ← isi Contract Address token Solana saat sudah ada
   // control-panel navigation
   nav: [
