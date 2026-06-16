@@ -24,9 +24,12 @@ const HTML_R = 38; // percent radius for html chips
 
 const ringStyle = { transformBox: "fill-box", transformOrigin: "center" } as const;
 
+// round to 3 decimals so server & client produce identical strings (no hydration mismatch)
+const r3 = (n: number) => Math.round(n * 1000) / 1000;
+
 function polar(r: number, deg: number) {
   const rad = (deg * Math.PI) / 180;
-  return { x: C + r * Math.cos(rad), y: C + r * Math.sin(rad) };
+  return { x: r3(C + r * Math.cos(rad)), y: r3(C + r * Math.sin(rad)) };
 }
 
 export default function ScaleaCore({ className = "" }: { className?: string }) {
@@ -123,8 +126,8 @@ export default function ScaleaCore({ className = "" }: { className?: string }) {
       {/* node chips */}
       {NODES.map((n, i) => {
         const rad = (n.a * Math.PI) / 180;
-        const x = 50 + HTML_R * Math.cos(rad);
-        const y = 50 + HTML_R * Math.sin(rad);
+        const x = r3(50 + HTML_R * Math.cos(rad));
+        const y = r3(50 + HTML_R * Math.sin(rad));
         return (
           <motion.div
             key={n.label}
