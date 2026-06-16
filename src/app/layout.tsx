@@ -16,11 +16,10 @@ export const metadata: Metadata = {
     description: site.description,
     url: site.url,
     siteName: site.name,
-    images: [{ url: "/logo.png", width: 1232, height: 1232, alt: site.name }],
+    images: [{ url: "/icon-512.png", width: 512, height: 512, alt: site.name }],
     type: "website",
   },
-  twitter: { card: "summary_large_image", title: `${site.name} — ${site.tagline}`, description: site.description, images: ["/logo.png"] },
-  icons: { icon: "/logo.png" },
+  twitter: { card: "summary_large_image", title: `${site.name} — ${site.tagline}`, description: site.description, images: ["/icon-512.png"] },
 };
 
 export const viewport: Viewport = { themeColor: "#06070a" };
